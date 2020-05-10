@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Help Center</title>
+    <script>
+      function fetcher() {
+        var search = window.location.search;
+        var id = search.split("=")[1];
+        document.getElementById("orderId").value = id;
+        document.getElementById("orderId").disabled = true;
+      }
+    </script>
+  </head>
+  <body onload="fetcher()">
+    <form method="POST" action="">
+      <label for="orderId">Order Id</label>
+      <input type="text" id="orderId" /><br />
+      <label for="issue">What's the issue?</label><br />
+      <textarea id="issue"></textarea><br />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
